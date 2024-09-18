@@ -1,0 +1,461 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+  margin-left: -50px;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+/* .check{ 
+  padding: 10px;
+  background-color: rgb(71, 105, 134) !important; 
+} */
+
+
+
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+
+.text-body{
+  margin-left: 17px;
+  text-align: center;
+  margin-top: 2%;
+}
+.mar{
+margin-top: -5%
+}
+.content {
+position: absolute;
+bottom: 5%;
+display: flex;
+flex-direction: column;
+align-items: center;
+transform: scale(0);
+transition: 0.5s;
+width: 100%; /* Ensure full width for centering */
+}
+
+.card  {
+  position: relative;
+ 
+}
+.card img{
+  width: 100%;
+  border-radius: 5px;
+}  
+
+.card .content {
+  position: absolute;
+  /* z-index: 3; */
+  bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.card:hover .content {
+  transform: scale(1);
+  bottom: 6px;
+}
+
+/* .content .title {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1em;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+} */
+
+/* .content .title span {
+  font-weight: 300;
+  font-size: 0.70em;
+} */
+
+.content .sci {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  /* margin-top: 5px; */
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li .fa-brands {
+  width: 14px;
+  
+}
+
+.sci li .fa-facebook {
+  width: 10px;
+}
+
+.sci li a {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.931);
+  background: rgba(255, 250, 250, 0.93);
+  fill: currentColor;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.sci li a:hover {
+  fill: currentColor;
+  color: rgba(255, 255, 255, 1);
+}
+
+ /* new  */
+ .section {
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.transition-hover {
+transition: transform 0.3s ease, color 0.3s ease;
+cursor: pointer;
+}
+
+.transition-hover:hover {
+transform: scale(1.1); /* Scale up the text by 10% */
+color: #00b7ff; /* Blue text color on hover */
+}
+.check:hover{
+background-color: #00b7ff;
+transform: scale(1.3);
+}
+
+.card {
+  position: relative;
+  overflow: hidden; /* Hide overflowed content */
+}
+
+.imgh {
+  transition: transform 0.8s ease;
+  width: 100%; /* Ensure image fits container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.imgh:hover {
+  transform: scale(1.1); 
+}
+
+.timer-section {
+text-align: center;
+}
+.timer-value {
+display: block;
+font-size: 2rem;
+font-weight: bold;
+}
+.timer-label {
+display: block;
+font-size: 1rem;
+color: #6c757d;
+}
+.marquee-container {
+width: 100%;
+overflow: hidden;
+background-color: #c0c0c0; /* Background color for the marquee area */
+padding: 30px 0;
+position: relative;
+}
+
+.marquee {
+display: inline-block;
+white-space: nowrap;
+padding-left: 100%;
+animation: marquee 10s linear infinite;
+font-size: 50px; /* Adjust font size as needed */
+}
+
+@keyframes marquee {
+0% {
+    transform: translateX(100%);
+}
+100% {
+    transform: translateX(-100%);
+}
+}
+.text{
+color: rgb(0, 52, 80);
+}
+.hov:hover{
+color: #7ad1f4;
+transform: scale(1.1); 
+cursor: pointer;
+border-bottom: 2px solid #1485b2;
+/* border-bottom: 2px solid #7c8a8f; */
+}
+
+@media (max-width: 576px) {
+.content {
+  bottom: 5%; /* Adjust if needed */
+  padding: 0; /* Adjust padding if needed */
+}
+
+.content .sci {
+  gap: 10px; /* Increase gap for better spacing */
+  padding: 5px; /* Adjust padding if needed */
+}
+
+.sci li a {
+  width: 24px; /* Adjust size if needed */
+  height: 24px; /* Adjust size if needed */
+}
+}
+/* General Pagination Styles */
+.pagination {
+  /* Background color for the entire pagination component */
+  border-radius: 0.25rem; /* Optional: rounded corners */
+}
+
+.pagination .page-link {
+  color: white; /* Text color for page numbers */
+  background-color: rgb(77, 103, 118); /* Background color for page numbers */
+  border: 1px solid rgb(252, 252, 252); /* Border color */
+}
+
+/* Hover and Focus States */
+.pagination .page-link:hover,
+.pagination .page-link:focus {
+  background-color: rgb(0, 72, 100); /* Darker color for hover effect */
+  border-color: rgb(0, 72, 100); /* Border color on hover */
+  color: white; /* Ensure text color remains white */
+}
+
+/* Active State */
+.pagination .page-item.active .page-link {
+  background-color: rgb(0, 32, 60); /* Background color for the active page number */
+  border-color: rgb(239, 242, 244); /* Border color for active page number */
+}
+
+/* Disabled State */
+.pagination .page-item.disabled .page-link {
+  background-color: rgb(200, 215, 226); /* Same as the normal state, or adjust if needed */
+  color: rgba(255, 255, 255, 0.5); /* Slightly faded text for disabled state */
+  cursor: not-allowed;
+}
+/* src/components/CardCarousel.css */
+.carousel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.item {
+  padding: 0 10px; /* Adjust the padding as needed */
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Hide Alice Carousel dots */
+.alice-carousel__dots {
+  display: none !important;
+}
+
+/* Hide Alice Carousel buttons */
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  display: none !important;
+}
+/* check  */
+.card {
+  position: relative;
+  border: none;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-image {
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .hover-image {
+  transform: scale(1.1);
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2; /* Ensure it is above the image */
+}
+
+.image-container:hover .overlay-content {
+  opacity: 1;
+}
+
+.icon-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.icon-list li {
+  margin: 0;
+}
+
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  border-radius: 50%;
+  transition: background 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.icon-link i {
+  font-size: 20px;
+}
+
+.icon-link:hover {
+  background: #000;
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .icon-list {
+    gap: 8px; /* Adjust gap for smaller screens */
+  }
+
+  .icon-link {
+    width: 35px;
+    height: 35px;
+  }
+
+  .icon-link i {
+    font-size: 18px;
+  }
+}
+@media (max-width: 450px) {
+  .icon-list {
+    gap: 8px; /* Adjust gap for smaller screens */
+  }
+
+  .icon-link {
+    width: 25px;
+    height: 25px;
+  }
+
+  .icon-link i {
+    font-size: 13px;
+  }
+}
+/* check  */
+/* Ensure the container has a consistent minimum height */
+
+
+/* Style for sticky pagination */
+.pagination-container {
+  position: sticky;
+  bottom: 0; /* Stick to the bottom of the container */
+  background: white; /* Background color to avoid transparency issues */
+  z-index: 1000; /* Ensure it stays above other content */
+  padding: 1rem; /* Optional: adjust padding as needed */
+}
+
+/* Ensure pagination button alignment and spacing */
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-item {
+  margin: 0 0.5rem; /* Adjust spacing between pagination items */
+}
+
+.page-link {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+/* Add hover and active styles for pagination links */
+.page-link:hover {
+  background-color: #f0f0f0;
+}
+
+.page-item.active .page-link {
+  /* background-color: #007bff; */
+  color: white;
+}
+/* Animation for continuous loop movement */
+@keyframes moveLoop {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px); /* Adjust this to control the amount of movement */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.img-loop {
+  width: 70%;
+  display: block;
+  animation: moveLoop 5s infinite ease-in-out; /* Loop movement animation */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+  border-radius: 8px;
+}
+
+/* Hover effect to zoom the image */
+.img-loop:hover {
+  transform: scale(1.1); /* Zoom effect */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a drop shadow for a3D effect */
+}
